@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,500;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-image: url(/images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-color: hsl(257, 40%, 49%);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+@media (width < 376px) {
+  body {
+    background-image: url(/images/bg-mobile.svg);
+    background-color: hsl(257, 40%, 49%);
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+  
+  .main-body{
+    gap: 20px !important;
+    
+  }
+
+  .prime-nav img {
+    width: auto;
+    margin-left: 2px !important; 
+  }
+
+  .sub-body {
+    width: 100%;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .content {
+    width: 100% !important;
+    text-align: center;
+    font-size: 13px;
+    align-items: center;
+  }
+
+  .social{
+    /* align-items: center; */
+    padding: 0 !important;
+    margin: 0 auto;
+  }
+
+}
+
+.prime-nav {
+  /* outline: 4px solid black; */
+  padding: 30px 60px 60px 0;
+  width: 100%;
+
+}
+
+.prime-nav img {
+  margin-left: 180px;
+  width: auto;
+}
+.main-body {
+  width: 100%;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sub-body {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.container {
+    display: block;
+    position: absolute;
+
+}
+
+.mockup {
+    width: auto;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 25%;  
+}
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    justify-items: center;
+    gap:30px;
+    padding-right: 160px;
+}
+
+.social ion-icon:hover {
+    cursor: pointer;
+    fill: hsl(300, 69%, 71%);
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  width: 180px;
+  height: 50px;
+  /* color: hsl(300, 69%, 71%); */
+  color: hsl(257, 40%, 49%);
+  box-shadow: rgb(19 10 10 / 63%) 6px 4px 10px;
+  font-weight: 500;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: hsl(300, 69%, 71%);
+  color: white;
+}
